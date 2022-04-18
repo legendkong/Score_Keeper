@@ -20,6 +20,8 @@ t1Button.addEventListener("click", function(){
          isGameOver = true;
          t1Score.classList.add('winner');
          t2Score.classList.add('loser');
+         t1Button.disabled = true;
+         t2Button.disabled = true;
       }
    }
    t1Score.textContent = score1;
@@ -33,6 +35,8 @@ t2Button.addEventListener("click", function(){
          isGameOver = true;
          t2Score.classList.add('winner');
          t1Score.classList.add('loser');
+         t1Button.disabled = true;
+         t2Button.disabled = true;
       }
    }
    t2Score.textContent = score2;
@@ -54,5 +58,6 @@ function resetToZero(){
    t2Score.textContent = score2;
    t1Score.classList.remove('winner', 'loser');
    t2Score.classList.remove('winner', 'loser');
-
+   t1Button.disabled = false;
+   t2Button.disabled = false;
 }

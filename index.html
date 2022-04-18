@@ -9,10 +9,16 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
+<section class="section">
    <div class="container">
       <div class="columns">
          <div class="column is-half is-offset-one-quarter">
             <div class="card">
+               <div class="card-image">
+                  <figure class="image is-2by1">
+                     <img src="./bballImage.jpeg" alt="">
+                  </figure>
+               </div>
                <header class="card-header">
                   <p class="card-header-title">
                      Basketball Score Keeper
@@ -38,14 +44,16 @@
                   </div>
                </div>
                <footer class="card-footer">
-                  <button class="is-primary button card-footer-item" id="t1Button">+1 Team 1</button>
-                  <button class="is-info button card-footer-item" id="t2Button">+1 Team 2</button>
-                  <button class="is-danger button card-footer-item" id="reset">Reset</button>
+                  <button class="is-primary button card-footer-item is-large" id="t1Button">+1 Team 1</button>
+                  <button class="is-info button card-footer-item is-large" id="t2Button">+1 Team 2</button>
+                  <button class="is-danger button card-footer-item is-large" id="reset">Reset</button>
                </footer>
             </div>
          </div>
       </div>
    </div>
+</section>
+
    <script src="app.js"></script>
 </body>
 </html>
