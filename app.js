@@ -2,9 +2,12 @@ const t1Button = document.querySelector("#t1Button");
 const t2Button = document.querySelector("#t2Button");
 const t1Score = document.querySelector("#t1Score");
 const t2Score = document.querySelector("#t2Score");
+const reset = document.querySelector("#reset");
+const playTo = document.querySelector("#playTo");
+
+let winningScore = 7;
 let score1 = 0;
 let score2 = 0;
-let winningScore = 21;
 let isGameOver = false;
 
 
@@ -30,3 +33,19 @@ t2Button.addEventListener("click", function(){
    }
    t2Score.textContent = score2;
 })
+
+reset.addEventListener("click", resetToZero);
+
+playTo.addEventListener("change", function(){
+   resetToZero();
+   winningScore = parseInt(this.value);  
+})
+
+
+function resetToZero(){
+   isGameOver = false;
+   score1 = 0;
+   score2 = 0;
+   t1Score.textContent = score1;
+   t2Score.textContent = score2;
+}
