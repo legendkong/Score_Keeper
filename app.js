@@ -18,6 +18,8 @@ t1Button.addEventListener("click", function(){
       score1 += 1;
       if(score1 === winningScore){
          isGameOver = true;
+         t1Score.classList.add('winner');
+         t2Score.classList.add('loser');
       }
    }
    t1Score.textContent = score1;
@@ -29,6 +31,8 @@ t2Button.addEventListener("click", function(){
       score2 += 1;
       if(score2 === winningScore){
          isGameOver = true;
+         t2Score.classList.add('winner');
+         t1Score.classList.add('loser');
       }
    }
    t2Score.textContent = score2;
@@ -48,4 +52,7 @@ function resetToZero(){
    score2 = 0;
    t1Score.textContent = score1;
    t2Score.textContent = score2;
+   t1Score.classList.remove('winner', 'loser');
+   t2Score.classList.remove('winner', 'loser');
+
 }
