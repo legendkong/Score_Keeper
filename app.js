@@ -4,7 +4,10 @@ const t1Score = document.querySelector("#t1Score");
 const t2Score = document.querySelector("#t2Score");
 const reset = document.querySelector("#reset");
 const playTo = document.querySelector("#playTo");
-
+const t1Name = document.querySelector("#t1Name");
+const t2Name = document.querySelector("#t2Name");
+const t1Text = document.querySelector("#t1Text");
+const t2Text = document.querySelector("#t2Text");
 let winningScore = 7;
 let score1 = 0;
 let score2 = 0;
@@ -60,4 +63,16 @@ function resetToZero(){
    t2Score.classList.remove('winner', 'loser');
    t1Button.disabled = false;
    t2Button.disabled = false;
+   t1Text.innerText = "Team 1";
+   t2Text.innerText = "Team 2";
+   t1Name.value = "";
+   t2Name.value = "";
 }
+
+
+t1Name.addEventListener("input", function(){
+   t1Text.innerText = t1Name.value;
+})
+t2Name.addEventListener("input", function(){
+   t2Text.innerText = t2Name.value;
+})
